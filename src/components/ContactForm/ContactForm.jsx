@@ -7,7 +7,7 @@ const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
     if (name === 'name') {
       setName(value);
@@ -16,7 +16,7 @@ const ContactForm = ({ addContact }) => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     addContact({ id: nanoid(), name, number });
